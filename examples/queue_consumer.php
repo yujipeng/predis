@@ -44,7 +44,8 @@ for($j = 0 ; $j < 25 ; $j ++){
 }
 
 
-
+$client->del($queue_list);
+$client->del($queue_list_high);
 
 // Say goodbye :-)
 $version = redis_version($client->info());

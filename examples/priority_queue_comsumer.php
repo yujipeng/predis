@@ -19,7 +19,6 @@ $client = new Predis\Client($single_server + array('read_write_timeout' => 0));
 
 $priority_queue_list = 'priority_queue_list';
 
-$client->del($priority_queue_list);
 
 for($i = 0 ; $i < 20 ; $i ++) {
 
@@ -57,6 +56,7 @@ for($i = 0 ; $i < 10 ; $i ++) {
     }
 }
 
+$client->del($priority_queue_list);
 
 
 // Say goodbye :-)
